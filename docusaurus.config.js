@@ -11,7 +11,7 @@ const GH_REPO_OWNER = 'PrasoonPratham';
 const GH_REPO_NAME = 'evaluation-metrics';
 const BASE_GITHUB_URL = `https://github.com/${GH_REPO_OWNER}/${GH_REPO_NAME}`;
 
-// With JSDoc @type annotations, IDEs can provide config autocompletion
+// Module exports
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   // Site name and tagline
@@ -88,7 +88,7 @@ module.exports = {
         items: [
           {
             type: 'doc',
-            docId: 'Metrics/F1',
+            docId: 'intro',
             position: 'left',
             label: 'Tutorial'
           },
