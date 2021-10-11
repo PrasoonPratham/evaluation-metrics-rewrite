@@ -24,8 +24,8 @@ $$
 
 Instead of squaring the error part and then taking a root, we simply take the absolute value, which converts every negative value to a positive value.
 
-
 ## Similarities
+
 Both metrics are similar in many ways, and show the average prediction error of a model. They range from 0 to infinity with 0 being a perfect score and it gets worse as the error increases.
 
 ## Differences
