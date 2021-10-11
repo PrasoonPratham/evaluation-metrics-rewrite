@@ -1,10 +1,10 @@
 ---
-sidebar_position: 1
+id: roc-auc
+title: ROC & AUC Curve
+sidebar_label: ROC & AUC Curve
 ---
-
-### ROC & AUC Curve
  
-##### Introduction
+## Introduction
 
 A new disease has been identified in a region, fatal enough to kill a patient if not treated.
  
@@ -15,7 +15,7 @@ A team of engineers develop a machine learning model to predict if someone has t
  
 But there's a big problem.
  
-##### The problem
+## The problem
 
 Let's refer to his disease as 'X'.
 
@@ -37,7 +37,7 @@ For every person that we caught with X, we falsely predicted 7 people who did no
 This is problematic for one main reason: **The model is essentially useless**. 
 It predicts almost everyone as being positive.
  
-##### How can we fix this? 🤔 
+## How can we fix this? 🤔 
  
 The first thing we need to realize is that this is certainly not the best model we could've trained. 
 "Binary  classification" models like in this case are hard to evaluate.
@@ -61,7 +61,7 @@ This meme helps me understand it better, case 3 and case 2 are errors.
 
 We'll come back to this in just a second, for now lets take a look at the model.
 
-##### A peek into the model
+## A peek into the model
 
 For the sake of simplicity, let's focus one of the metrics that was used to train the model, body fat. Here's a chart that shows the body fat of 6 people and whether they had the disease or not.
 
@@ -71,7 +71,7 @@ This data is fit onto a logistic regression curve, which is a machine learning a
 
 ![5.png](/img/metrics/01_ROC/5.png)
 
-##### Thresholds
+## Thresholds
 
 The y-axis shows the probability that someone has the disease from 0 to 1.
 
@@ -99,7 +99,7 @@ We correctly classify 4 people and made 2 mistakes of different kinds.
 
 ![8.png](/img/metrics/01_ROC/8.png)
 
-##### Better thresholds
+## Better thresholds
 
 Can you think of a never threshold that can improve on this or make lesser mistakes?
 
@@ -116,7 +116,7 @@ Now imagine thousands of data points on the logistc regression curve, how would 
 
 Now our previous method of trial error, this would be a painstaking and long process, fortunately there is a better solution.
 
-##### The ROC Curve
+## The ROC Curve
 
 The ROC (Receiver operator characteristic) curve is a way of summarizing these findings in a simple graph to help us find the optimal threshold for bianary classification models. It looks something like this 👇
 
@@ -193,11 +193,8 @@ By simply using the optimal thresholds, we can dratically improve the accuracy o
 
 Another topic related to the ROC curve is AUC(Area under the curve), it a metric that helps us compare the performance of 2 models.
 
-##### The AUC Curve
+## The AUC Curve
 
 The AUC basically says that given the ROC curve of 2 model, the one with a great area under it performs better the other one. Like in this case, the yellow model is better than the green one.
 
 ![18.png](/img/metrics/01_ROC/17.png)
-
-
-

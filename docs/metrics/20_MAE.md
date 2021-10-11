@@ -1,14 +1,14 @@
 ---
-sidebar_position: 1
+id: mean-absolute-error
+title: Mean Absolute Error
+sidebar_label: Mean Absolute Error
 ---
-
-### Mean Absolute Error
 
 This metric is extremely similar to the root mean squared error, but instead of taking the square root of the error, it simply takes the absolute value of the error.
 
 If you haven't already, read the [mean squared error](./15_MS) section.
 
-##### The formulas
+## The formulas
 
 This is the formula for calculating the root mean squared error:
 
@@ -25,10 +25,10 @@ $$
 Instead of squaring the error part and then taking a root, we simply take the absolute value, which converts every negative value to a positive value.
 
 
-##### Similarities
+## Similarities
 Both metrics are similar in many ways, and show the average prediction error of a model. They range from 0 to infinity with 0 being a perfect score and it gets worse as the error increases.
 
-##### Differences
+## Differences
 
 Since RSME takes the square of the error and then the, it is more sensitive to outliers like larger errors and gives it more weight.
 
@@ -69,4 +69,3 @@ mean_squared_error(x,y)
 You can notice in case 2, the RSME is twice as big as the error in case 1 and 4 times in case 3 while MAE remains the same, this is because RSME increases with the variance of the frequency distribution of error magnitudes.
 
 RSME punished large errors, MAE does not. MAE is easier to interpret as it is a simple average of the absolute values of the errors.
-

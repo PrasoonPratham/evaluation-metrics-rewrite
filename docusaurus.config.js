@@ -12,7 +12,6 @@ const GH_REPO_NAME = 'evaluation-metrics';
 const BASE_GITHUB_URL = `https://github.com/${GH_REPO_OWNER}/${GH_REPO_NAME}`;
 
 // Module exports
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   // Site name and tagline
   title: SITE_NAME,
@@ -34,8 +33,7 @@ module.exports = {
   presets: [
     [
       '@docusaurus/preset-classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: `${BASE_GITHUB_URL}/edit/main/website/`
@@ -47,7 +45,7 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css')
         }
-      })
+      }
     ]
   ],
 
@@ -58,6 +56,7 @@ module.exports = {
       {
         docs: {
           path: 'docs',
+          sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [math],
           rehypePlugins: [katex]
         }
@@ -76,78 +75,76 @@ module.exports = {
   ],
 
   // Site theme
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      navbar: {
-        title: SITE_NAME,
-        logo: {
-          alt: `${SITE_NAME} logo`,
-          src: 'img/logo.svg'
+  themeConfig: {
+    navbar: {
+      title: SITE_NAME,
+      logo: {
+        alt: `${SITE_NAME} logo`,
+        src: 'img/logo.svg'
+      },
+      items: [
+        {
+          type: 'doc',
+          docId: 'intro',
+          position: 'left',
+          label: 'Docs'
         },
-        items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial'
-          },
-          { to: '/blog', label: 'Blog', position: 'left' },
-          {
-            href: BASE_GITHUB_URL,
-            label: 'GitHub',
-            position: 'right'
-          }
-        ]
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro'
-              }
-            ]
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus'
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus'
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus'
-              }
-            ]
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog'
-              },
-              {
-                label: 'GitHub',
-                href: BASE_GITHUB_URL
-              }
-            ]
-          }
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Evaluation Metrics. Built with Docusaurus.`
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme
-      }
-    })
+        { to: '/blog', label: 'Blog', position: 'left' },
+        {
+          href: BASE_GITHUB_URL,
+          label: 'GitHub',
+          position: 'right'
+        }
+      ]
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Docs',
+          items: [
+            {
+              label: 'Tutorial',
+              to: '/docs/intro'
+            }
+          ]
+        },
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/questions/tagged/docusaurus'
+            },
+            {
+              label: 'Discord',
+              href: 'https://discordapp.com/invite/docusaurus'
+            },
+            {
+              label: 'Twitter',
+              href: 'https://twitter.com/docusaurus'
+            }
+          ]
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'Blog',
+              to: '/blog'
+            },
+            {
+              label: 'GitHub',
+              href: BASE_GITHUB_URL
+            }
+          ]
+        }
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Evaluation Metrics. Built with Docusaurus.`
+    },
+    prism: {
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme
+    }
+  }
 };
