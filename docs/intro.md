@@ -1,35 +1,30 @@
 ---
+title: Evaluation Metrics
+sidebar_label: Evaluation Metrics
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+### Why are we doing this?
 
-Let's discover **Docusaurus in less than 5 minutes**.
+We focus on evaluation metrics, because they do not have extensive dependencies on the intricacies of Artificial Intelligence, but only require the very basics of mathematical analysis and statistics to understand how they tick. They are afterall, only a formal way of measuring how well an answer corresponds to a question. With a focus on Evaluation Metrics, we become the gatekeepers of all the research activity that is conducted by the Research community in Artificial Intelligence.
 
-## Getting Started
+Unfortunately, not many researchers still have deep intuitions behind many of the evaluation metrics we regularly use. We still treat them as just numbers that we have to optimize.
 
-Get started by **creating a new site**.
+### How are we aiming to do this?
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+In this repository, we will focus on building a set of resources which will help anyone build a fundamental intuition around many of these evaluation metrics.
 
-## Generate a new site
+We will think about these evaluation metrics from the first principles, and ask questions like,
 
-Generate a new Docusaurus site using the **classic template**:
+- why does this particular evaluation metric even need to question?
+- What is its defining factor?
+- For what classes of problems is this metric used?
+- What are the common things we should be careful about when we are using this evaluation metric?
 
-```shell
-npm init docusaurus@latest my-website classic
-```
+And So on and so forth.
 
-## Start your site
+### We are open! You can check out here!
 
-Run the development server:
+We love people's support in growing and improving. We are open-source, and open to suggestions, issues, contributions and more!
 
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
+If you're interested in helping us out, You can check us out [here](https://github.com/PrasoonPratham/evaluation-metrics-rewrite).
