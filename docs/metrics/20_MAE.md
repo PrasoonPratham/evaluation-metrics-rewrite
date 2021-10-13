@@ -6,7 +6,7 @@ sidebar_label: Mean Absolute Error
 
 This metric is extremely similar to the root mean squared error, but instead of taking the square root of the error, it simply takes the absolute value of the error.
 
-If you haven't already, read the [mean squared error](/docs/metrics/15_MS) section.
+If you haven't already, read the [mean squared error](/docs/metrics/mean-squared-error) section.
 
 ## The formulas
 
