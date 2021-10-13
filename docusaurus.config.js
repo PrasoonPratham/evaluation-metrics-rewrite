@@ -5,10 +5,10 @@ const katex = require('rehype-katex');
 
 // Constants
 const SITE_NAME = 'Evaluation Metrics';
-const SITE_TAGLINE = 'Dinosaurs are cool';
+const SITE_TAGLINE = 'All about Machine learning evaluation metrics!';
 
 const GH_REPO_OWNER = 'PrasoonPratham';
-const GH_REPO_NAME = 'evaluation-metrics';
+const GH_REPO_NAME = 'evaluation-metrics-rewrite';
 const BASE_GITHUB_URL = `https://github.com/${GH_REPO_OWNER}/${GH_REPO_NAME}`;
 
 // Module exports
@@ -18,7 +18,7 @@ module.exports = {
   tagline: SITE_TAGLINE,
 
   // Site URL config
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://evaluation-metrics-rewrite.vercel.app',
   baseUrl: '/',
 
   // Site broken links configuration
