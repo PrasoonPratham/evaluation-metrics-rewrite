@@ -49,31 +49,6 @@ module.exports = {
     ]
   ],
 
-  // Site presets
-  presets: [
-    [
-      '@docusaurus/preset-classic',
-      {
-        docs: {
-          path: 'docs',
-          sidebarPath: require.resolve('./sidebars.js'),
-          remarkPlugins: [math],
-          rehypePlugins: [katex]
-        }
-      }
-    ]
-  ],
-
-  // Site stylesheets
-  stylesheets: [
-    {
-      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css',
-      integrity:
-        'sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc',
-      crossorigin: 'anonymous'
-    }
-  ],
-
   // Site theme
   themeConfig: {
     navbar: {
@@ -104,7 +79,7 @@ module.exports = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Evaluation Metrics intro',
               to: '/docs/intro'
             }
           ]
@@ -112,10 +87,6 @@ module.exports = {
         {
           title: 'Community',
           items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus'
-            },
             {
               label: 'Discord',
               href: 'https://discordapp.com/invite/docusaurus'
@@ -146,5 +117,30 @@ module.exports = {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme
     }
-  }
+  },
+
+  // Site presets
+  presets: [
+    [
+      '@docusaurus/preset-classic',
+      {
+        docs: {
+          path: 'docs',
+          sidebarPath: require.resolve('./sidebars.js'),
+          remarkPlugins: [math],
+          rehypePlugins: [katex]
+        }
+      }
+    ]
+  ],
+
+  // Site stylesheets
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css',
+      integrity:
+        'sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc',
+      crossorigin: 'anonymous'
+    }
+  ]
 };
