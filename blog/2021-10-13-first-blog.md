@@ -7,6 +7,6 @@ authors: [pratham, prashant, sunrit]
 tags: []
 ---
 
-Hello, World! 👋 
+Hello, World! 👋
 
 Welcome you Evaluation Metrics! Hope you learn something new and amazing :)
